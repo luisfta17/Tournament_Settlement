@@ -1,0 +1,48 @@
+import java.math.BigDecimal;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+
+public class Tournament implements PrizeAllocator{
+    private ArrayList<Participant> participants;
+    private HashMap<Integer, BigDecimal> prizes;
+
+    public Tournament(){
+        this.participants = new ArrayList<Participant>();
+        this.prizes = new HashMap<Integer, BigDecimal>();
+    }
+
+    public ArrayList<Participant> getParticipants() {
+        return this.participants;
+    }
+
+    public void addParticipants(Participant participant){
+        this.participants.add(participant);
+    }
+
+    public void removeParticipant(Participant participant){
+        this.participants.remove(participant);
+    }
+
+    public void removeAllParticipants(){
+        this.participants.clear();
+    }
+
+    public HashMap<Integer, BigDecimal> getPrizes() {
+        return this.prizes;
+    }
+
+    public void addPrize(Integer position, BigDecimal amount){
+        this.prizes.put(position, amount);
+    }
+
+    public void getPriceForPosition(Integer position){
+        this.prizes.get(position);
+    }
+
+    public void awardPrizes(List<Participant> participants, Map<Integer, BigDecimal> prizes) {
+
+    }
+}
