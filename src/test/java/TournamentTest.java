@@ -2,6 +2,8 @@ import org.junit.Before;
 import org.junit.Test;
 
 import java.math.BigDecimal;
+import java.util.ArrayList;
+import java.util.HashMap;
 
 import static org.junit.Assert.assertEquals;
 
@@ -20,8 +22,8 @@ public class TournamentTest {
     @Before
     public void before(){
         player1 = new Player("Luis", 22);
-        player2 = new Player("Ana", 25);
-        player3 = new Player("Andy", 20);
+        player2 = new Player("Ana", 30);
+        player3 = new Player("Andy", 22);
         player4 = new Player("Jessica", 30);
         player5 = new Player("Daniel", 10);
         firstPrize = new BigDecimal("50.00").setScale(2);
@@ -99,5 +101,37 @@ public class TournamentTest {
         assertEquals("Andy", tournament1.getParticipants().get(1).getName());
     }
 
+    @Test
+    public void canGenerateHashOfWinners(){
+        assertEquals("{1=[], 2=[], 3=[], 4=[]}", tournament1.populateHashWithArraysForPositions().toString());
+        tournament1.addPrize(4, fourthPrize);
+        assertEquals("{1=[], 2=[], 3=[], 4=[], 5=[]}", tournament1.populateHashWithArraysForPositions().toString());
+    }
+
+
+    @Test
+    public void canCheckIfPlayerIsInHash(){
+        HashMap<Integer, ArrayList<Participant>> positions = tournament1.populateHashWithArraysForPositions();
+        assertEquals(false, tournament1.checkIfHashContainsPlayer(positions, player1));
+        positions.get(2).add(player1);
+        assertEquals(true, tournament1.checkIfHashContainsPlayer(positions, player1));
+
+    }
+
+    @Test
+    public void canSetWinnersInHash() {
+        HashMap<Integer, ArrayList<Participant>> hash = tournament1.createHashMapOfPositions();
+        assertEquals("Jessica", hash.get(1).get(1).getName());
+        assertEquals("Ana", hash.get(1).get(0).getName());
+        assertEquals(2, hash.get(1).size());
+        assertEquals("Luis", hash.get(2).get(0).getName());
+        assertEquals("Andy", hash.get(2).get(1).getName());
+        assertEquals(2, hash.get(2).size());
+        assertEquals(0, hash.get(3).size());
+        assertEquals(0, hash.get(4).size());
+        tournament1.addParticipants(player5);
+        HashMap<Integer, ArrayList<Participant>> hash2 = tournament1.createHashMapOfPositions();
+        assertEquals("Daniel", hash2.get(3).get(0).getName());
+    }
 
 }
