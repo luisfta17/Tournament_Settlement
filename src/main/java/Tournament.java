@@ -15,7 +15,7 @@ public class Tournament implements PrizeAllocator{
     }
 
     public ArrayList<Participant> getParticipants() {
-        return this.participants;
+        return new ArrayList<Participant>(this.participants);
     }
 
     public void addParticipants(Participant participant){
@@ -31,15 +31,23 @@ public class Tournament implements PrizeAllocator{
     }
 
     public HashMap<Integer, BigDecimal> getPrizes() {
-        return this.prizes;
+        return new HashMap<Integer, BigDecimal>(this.prizes);
     }
 
     public void addPrize(Integer position, BigDecimal amount){
         this.prizes.put(position, amount);
     }
 
-    public void getPriceForPosition(Integer position){
-        this.prizes.get(position);
+    public BigDecimal getPrizeForPosition(Integer position){
+       return this.prizes.get(position);
+    }
+
+    public void removePrizeInPosition(Integer position){
+       this.prizes.remove(position);
+    }
+
+    public void removeAllPrizes(){
+       this.prizes.clear();
     }
 
     public void awardPrizes(List<Participant> participants, Map<Integer, BigDecimal> prizes) {
