@@ -1,8 +1,5 @@
 import java.math.BigDecimal;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 
 public class Tournament implements PrizeAllocator{
@@ -48,6 +45,10 @@ public class Tournament implements PrizeAllocator{
 
     public void removeAllPrizes(){
        this.prizes.clear();
+    }
+
+    public void sortParticipantsByScore(){
+        Collections.sort(this.participants, (playerA, playerB) -> playerA.getScore() < playerB.getScore() ? -1 : playerA.getScore() == playerB.getScore() ? 0 : 1);
     }
 
     public void awardPrizes(List<Participant> participants, Map<Integer, BigDecimal> prizes) {

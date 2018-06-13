@@ -89,5 +89,15 @@ public class TournamentTest {
         assertEquals(0, tournament1.getPrizes().size());
     }
 
+    @Test
+    public void canSortParticipantsByScore(){
+        assertEquals("Luis", tournament1.getParticipants().get(0).getName());
+        tournament1.addParticipants(player5);
+        assertEquals("Luis", tournament1.getParticipants().get(0).getName());
+        tournament1.sortParticipantsByScore();
+        assertEquals("Daniel", tournament1.getParticipants().get(0).getName());
+        assertEquals("Andy", tournament1.getParticipants().get(1).getName());
+    }
+
 
 }
