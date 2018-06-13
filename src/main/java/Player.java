@@ -18,7 +18,7 @@ public class Player implements Participant {
     public int getScore() {
         return score;
     }
-    
+
     public BigDecimal getPrize() {
         return prize;
     }
