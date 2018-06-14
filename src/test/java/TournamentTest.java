@@ -4,6 +4,8 @@ import org.junit.Test;
 import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 import static org.junit.Assert.assertEquals;
 
@@ -13,10 +15,12 @@ public class TournamentTest {
     Player player3;
     Player player4;
     Player player5;
+    List<Participant> participantsList1;
     BigDecimal firstPrize;
     BigDecimal secondPrize;
     BigDecimal thirdPrize;
     BigDecimal fourthPrize;
+    Map<Integer, BigDecimal> prizes;
     Tournament tournament1;
 
     @Before
@@ -31,87 +35,38 @@ public class TournamentTest {
         thirdPrize = new BigDecimal("10.00").setScale(2);
         fourthPrize = new BigDecimal("5.00").setScale(2);
         tournament1 = new Tournament();
-        tournament1.addParticipants(player1);
-        tournament1.addParticipants(player2);
-        tournament1.addParticipants(player3);
-        tournament1.addParticipants(player4);
-        tournament1.addPrize(1, firstPrize);
-        tournament1.addPrize(2, secondPrize);
-        tournament1.addPrize(3, thirdPrize);
-    }
-
-    @Test
-    public void hasParticipants(){
-        assertEquals(4, tournament1.getParticipants().size());
-    }
-
-    @Test
-    public void canAddParticipants(){
-        tournament1.addParticipants(player5);
-        assertEquals(5, tournament1.getParticipants().size());
-    }
-
-    @Test
-    public void canRemoveParticipants(){
-        tournament1.removeParticipant(player3);
-        assertEquals(3, tournament1.getParticipants().size());
-    }
-
-    @Test
-    public void canRemoveAllParticipants(){
-        tournament1.removeAllParticipants();
-        assertEquals(0, tournament1.getParticipants().size());
-    }
-
-    @Test
-    public void hasPrizes(){
-        assertEquals(3, tournament1.getPrizes().size());
-    }
-
-    @Test
-    public void canAddPrizes(){
-        tournament1.addPrize(4, fourthPrize);
-        assertEquals(4, tournament1.getPrizes().size());
-    }
-
-    @Test
-    public void canGetPrizeForPosition(){
-        assertEquals("50.00", tournament1.getPrizeForPosition(1).toString());
-    }
-
-    @Test
-    public void canRemovePrizeInPosition(){
-        tournament1.removePrizeInPosition(3);
-        assertEquals(2, tournament1.getPrizes().size());
-    }
-
-    @Test
-    public void canRemoveAllPrizes(){
-        tournament1.removeAllPrizes();
-        assertEquals(0, tournament1.getPrizes().size());
+        participantsList1 = new ArrayList<>();
+        participantsList1.add(player1);
+        participantsList1.add(player2);
+        participantsList1.add(player3);
+        participantsList1.add(player4);
+        prizes = new HashMap<>();
+        prizes.put(1, firstPrize);
+        prizes.put(2, secondPrize);
+        prizes.put(3, thirdPrize);
     }
 
     @Test
     public void canSortParticipantsByScore(){
-        assertEquals("Luis", tournament1.getParticipants().get(0).getName());
-        tournament1.addParticipants(player5);
-        assertEquals("Luis", tournament1.getParticipants().get(0).getName());
-        tournament1.sortParticipantsByScore();
-        assertEquals("Daniel", tournament1.getParticipants().get(0).getName());
-        assertEquals("Andy", tournament1.getParticipants().get(1).getName());
+        assertEquals("Luis", participantsList1.get(0).getName());
+        participantsList1.add(player5);
+        assertEquals("Luis", participantsList1.get(0).getName());
+        List<Participant> list = tournament1.sortParticipantsByScore(participantsList1);
+        assertEquals("Ana", list.get(0).getName());
+        assertEquals("Jessica", list.get(1).getName());
     }
 
     @Test
     public void canGenerateHashOfWinners(){
-        assertEquals("{1=[], 2=[], 3=[], 4=[]}", tournament1.populateHashWithArraysForPositions().toString());
-        tournament1.addPrize(4, fourthPrize);
-        assertEquals("{1=[], 2=[], 3=[], 4=[], 5=[]}", tournament1.populateHashWithArraysForPositions().toString());
+        assertEquals("{1=[], 2=[], 3=[], 4=[]}", tournament1.populateHashWithArraysForPositions(prizes).toString());
+        prizes.put(4, fourthPrize);
+        assertEquals("{1=[], 2=[], 3=[], 4=[], 5=[]}", tournament1.populateHashWithArraysForPositions(prizes).toString());
     }
 
 
     @Test
     public void canCheckIfPlayerIsInHash(){
-        HashMap<Integer, ArrayList<Participant>> positions = tournament1.populateHashWithArraysForPositions();
+        HashMap<Integer, ArrayList<Participant>> positions = tournament1.populateHashWithArraysForPositions(prizes);
         assertEquals(false, tournament1.checkIfHashContainsPlayer(positions, player1));
         positions.get(2).add(player1);
         assertEquals(true, tournament1.checkIfHashContainsPlayer(positions, player1));
@@ -120,7 +75,7 @@ public class TournamentTest {
 
     @Test
     public void canSetWinnersInHash() {
-        HashMap<Integer, ArrayList<Participant>> hash = tournament1.createHashMapOfPositions();
+        HashMap<Integer, ArrayList<Participant>> hash = tournament1.createHashMapOfPositions(participantsList1, prizes);
         assertEquals("Jessica", hash.get(1).get(1).getName());
         assertEquals("Ana", hash.get(1).get(0).getName());
         assertEquals(2, hash.get(1).size());
@@ -129,8 +84,8 @@ public class TournamentTest {
         assertEquals(2, hash.get(2).size());
         assertEquals(0, hash.get(3).size());
         assertEquals(0, hash.get(4).size());
-        tournament1.addParticipants(player5);
-        HashMap<Integer, ArrayList<Participant>> hash2 = tournament1.createHashMapOfPositions();
+        participantsList1.add(player5);
+        HashMap<Integer, ArrayList<Participant>> hash2 = tournament1.createHashMapOfPositions(participantsList1, prizes);
         assertEquals("Daniel", hash2.get(3).get(0).getName());
     }
 
