@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="35b84a92-024f-4122-9f9e-081f4b7b0268" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/Player.java" afterPath="$PROJECT_DIR$/src/main/java/Player.java" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Tournament.java" afterPath="$PROJECT_DIR$/src/main/java/Tournament.java" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/TournamentTest.java" afterPath="$PROJECT_DIR$/src/test/java/TournamentTest.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -78,11 +76,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Tournament.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Tournament.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/Tournament.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="126">
-              <caret line="62" column="0" lean-forward="false" selection-start-line="62" selection-start-column="0" selection-end-line="72" selection-end-column="33" />
+            <state relative-caret-position="-120">
+              <caret line="16" column="19" lean-forward="false" selection-start-line="16" selection-start-column="19" selection-end-line="16" selection-end-column="19" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -90,10 +88,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TournamentTest.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="TournamentTest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/TournamentTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-76">
+            <state relative-caret-position="-271">
               <caret line="111" column="39" lean-forward="false" selection-start-line="111" selection-start-column="39" selection-end-line="111" selection-end-column="39" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -157,8 +155,8 @@
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/Participant.java" />
         <option value="$PROJECT_DIR$/src/main/java/Player.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Tournament.java" />
         <option value="$PROJECT_DIR$/src/test/java/TournamentTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Tournament.java" />
       </list>
     </option>
   </component>
@@ -262,7 +260,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.TournamentTest.canAwardPrizes">
+  <component name="RunManager" selected="JUnit.All in fanduel">
     <configuration default="true" type="Applet" factoryName="Applet">
       <option name="WIDTH" value="400" />
       <option name="HEIGHT" value="300" />
@@ -452,8 +450,8 @@
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="JUnit.TournamentTest.canAwardPrizes" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.All in fanduel" />
+        <item index="0" class="java.lang.String" itemvalue="JUnit.All in fanduel" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.TournamentTest.canAwardPrizes" />
         <item index="2" class="java.lang.String" itemvalue="JUnit.TournamentTest" />
         <item index="3" class="java.lang.String" itemvalue="JUnit.TournamentTest.canGenerateHashOfWinners" />
         <item index="4" class="java.lang.String" itemvalue="JUnit.TournamentTest.canGetJackpot" />
@@ -489,28 +487,27 @@
     <history-entry file="All_in_fanduel - 2018.06.14 at 21h 00m 03s.xml">
       <configuration name="All in fanduel" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TournamentTest - 2018.06.14 at 18h 40m 58s.xml">
-      <configuration name="TournamentTest" configurationId="JUnit" />
+    <history-entry file="All_in_fanduel - 2018.06.14 at 21h 12m 16s.xml">
+      <configuration name="All in fanduel" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="All_in_fanduel - 2018.06.14 at 21h 17m 41s.xml">
+      <configuration name="All in fanduel" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="All_in_fanduel - 2018.06.14 at 21h 36m 57s.xml">
+      <configuration name="All in fanduel" configurationId="JUnit" />
     </history-entry>
     <history-entry file="TournamentTest - 2018.06.14 at 18h 41m 11s.xml">
       <configuration name="TournamentTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TournamentTest_canAwardPrizes - 2018.06.14 at 18h 33m 18s.xml">
-      <configuration name="TournamentTest.canAwardPrizes" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="TournamentTest_canAwardPrizes - 2018.06.14 at 18h 34m 01s.xml">
-      <configuration name="TournamentTest.canAwardPrizes" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="TournamentTest_canAwardPrizes - 2018.06.14 at 18h 34m 30s.xml">
-      <configuration name="TournamentTest.canAwardPrizes" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="TournamentTest_canAwardPrizes - 2018.06.14 at 21h 00m 12s.xml">
+      <configuration name="TournamentTest.canAwardPrizes" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TournamentTest_canAwardPrizes - 2018.06.14 at 21h 29m 03s.xml">
       <configuration name="TournamentTest.canAwardPrizes" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="717" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -546,7 +543,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="32" />
+      <option name="time" value="33" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -773,6 +770,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/PrizeAllocator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="17" lean-forward="false" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/PlayerTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="164">
@@ -789,10 +796,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/PrizeAllocator.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/TournamentTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="17" lean-forward="false" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
+        <state relative-caret-position="-271">
+          <caret line="111" column="39" lean-forward="false" selection-start-line="111" selection-start-column="39" selection-end-line="111" selection-end-column="39" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -801,18 +808,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Tournament.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="62" column="0" lean-forward="false" selection-start-line="62" selection-start-column="0" selection-end-line="72" selection-end-column="33" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/TournamentTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-76">
-          <caret line="111" column="39" lean-forward="false" selection-start-line="111" selection-start-column="39" selection-end-line="111" selection-end-column="39" />
+        <state relative-caret-position="-120">
+          <caret line="16" column="19" lean-forward="false" selection-start-line="16" selection-start-column="19" selection-end-line="16" selection-end-column="19" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

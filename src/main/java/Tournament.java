@@ -8,8 +8,7 @@ public class Tournament implements PrizeAllocator{
 
 
     public List<Participant> sortParticipantsByScore(List<Participant> participants){
-        Collections.sort(participants, (playerA, playerB) -> playerA.getScore() < playerB.getScore() ? 1 :
-                playerA.getScore() == playerB.getScore() ? 0 : -1);
+        Collections.sort(participants, (playerA, playerB) -> playerA.getScore() < playerB.getScore() ? 1 : playerA.getScore() == playerB.getScore() ? 0 : -1);
         return participants;
     }
 
@@ -44,42 +43,31 @@ public class Tournament implements PrizeAllocator{
         return positions;
     }
 
+    public BigDecimal collectJackpot(Map<Integer, BigDecimal> prizes, int prizeKey, int numWinners){
+        BigDecimal prizeValue = new BigDecimal("0.00").setScale(2, BigDecimal.ROUND_FLOOR);
+        int j = prizeKey;
+        int limit = Math.min(prizeKey + numWinners, prizes.size() + 1);
+        do{
+            if(j > prizes.size()) break;
+            prizeValue = prizeValue.add(prizes.get(j));
+            j++;
+        } while(j < limit);
+
+        return prizeValue;
+    }
+
     public void awardPrizes(List<Participant> participants, Map<Integer, BigDecimal> prizes) {
-        //Build hash of participants placing in each position
         HashMap<Integer, ArrayList<Participant>> hashResults = this.createHashMapOfPositions(participants, prizes);
-          //Initialise prize to start at
-          int prizeKey = 1;
-          //iterate through each participant result
-          for(int i = 1; i <= hashResults.size(); i ++){
-              //If noone came in a position then exit
-              if(hashResults.get(i).size() == 0) break;
-              // Get how many people placed in position i
-              int numWinners = hashResults.get(i).size();
-              // Initialise prize pool
-              BigDecimal prizeValue = new BigDecimal("0.00").setScale(2, BigDecimal.ROUND_FLOOR);
-
-
-
-              // start j at next prize
-              int j = prizeKey;
-              //get limit for j in the loop the one is to get to the last one
-              int limit = Math.min(prizeKey + numWinners, prizes.size() + 1);
-              do{
-                  // if we exceed bounds break
-                  if(j > prizes.size()) break;
-                  //get current prize and add it to the total prize pool
-                  prizeValue = prizeValue.add(prizes.get(j));
-                  j++;
-              } while(j < limit);
-
-
-              BigDecimal individualPrize = prizeValue.divide(new BigDecimal(numWinners), BigDecimal.ROUND_FLOOR);
-              //assign individual prizes
-              for(Participant participant : hashResults.get(i) ){
-                  participant.setPrize(individualPrize);
-              }
-              //Update starting prize for next position
-              prizeKey += numWinners;
-          }
+        int prizeKey = 1;
+        for(int i = 1; i <= hashResults.size(); i ++){
+            if(hashResults.get(i).size() == 0) break;
+            int numWinners = hashResults.get(i).size();
+            BigDecimal prizeValue = collectJackpot(prizes, prizeKey, numWinners);
+            BigDecimal individualPrize = prizeValue.divide(new BigDecimal(numWinners), BigDecimal.ROUND_FLOOR);
+            for(Participant participant : hashResults.get(i) ){
+                participant.setPrize(individualPrize);
+            }
+            prizeKey += numWinners;
+        }
     }
 }
