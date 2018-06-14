@@ -52,6 +52,17 @@ public class Tournament implements PrizeAllocator{
         return positions;
     }
 
+    public BigDecimal getJackpot(Map<Integer, BigDecimal> prizes, Integer initialPosition, Integer finalPosition){
+        BigDecimal jackPot = new BigDecimal("0.00").setScale(2, BigDecimal.ROUND_FLOOR);
+        for (int i = 0; i < Math.min(prizes.size(), finalPosition); i++){
+            BigDecimal prize = prizes.get(initialPosition);
+            jackPot = jackPot.add(prize);
+            initialPosition++;
+        }
+
+        return jackPot.divide(new BigDecimal(finalPosition), BigDecimal.ROUND_FLOOR);
+    }
+
     public void awardPrizes(List<Participant> participants, Map<Integer, BigDecimal> prizes) {
         // sort participants
         // create hash of arrays in function of size of prizes

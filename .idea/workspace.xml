@@ -5,6 +5,7 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Tournament.java" afterPath="$PROJECT_DIR$/src/main/java/Tournament.java" />
       <change beforePath="$PROJECT_DIR$/src/test/java/TournamentTest.java" afterPath="$PROJECT_DIR$/src/test/java/TournamentTest.java" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Tournament.class" afterPath="$PROJECT_DIR$/target/classes/Tournament.class" />
       <change beforePath="$PROJECT_DIR$/target/test-classes/TournamentTest.class" afterPath="$PROJECT_DIR$/target/test-classes/TournamentTest.class" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -80,11 +81,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Tournament.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Tournament.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/Tournament.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-222">
-              <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+            <state relative-caret-position="344">
+              <caret line="62" column="83" lean-forward="false" selection-start-line="62" selection-start-column="83" selection-end-line="62" selection-end-column="83" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -92,11 +93,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TournamentTest.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="TournamentTest.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/TournamentTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="237">
-              <caret line="86" column="29" lean-forward="false" selection-start-line="86" selection-start-column="29" selection-end-line="86" selection-end-column="29" />
+            <state relative-caret-position="457">
+              <caret line="97" column="26" lean-forward="false" selection-start-line="97" selection-start-column="26" selection-end-line="97" selection-end-column="26" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -149,8 +150,8 @@
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/Player.java" />
         <option value="$PROJECT_DIR$/src/main/java/Participant.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Tournament.java" />
         <option value="$PROJECT_DIR$/src/test/java/TournamentTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Tournament.java" />
       </list>
     </option>
   </component>
@@ -249,7 +250,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.TournamentTest.canSetWinnersInHash">
+  <component name="RunManager" selected="JUnit.TournamentTest.canGetJackpot">
     <configuration default="true" type="Applet" factoryName="Applet">
       <option name="WIDTH" value="400" />
       <option name="HEIGHT" value="300" />
@@ -330,14 +331,14 @@
       <envs />
       <patterns />
     </configuration>
-    <configuration name="TournamentTest.canSetWinnersInHash" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="TournamentTest.canGetJackpot" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="fanduel" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="TournamentTest" />
-      <option name="METHOD_NAME" value="canSetWinnersInHash" />
+      <option name="METHOD_NAME" value="canGetJackpot" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -350,14 +351,14 @@
       <envs />
       <patterns />
     </configuration>
-    <configuration name="TournamentTest.canSortParticipantsByScore" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="TournamentTest.canSetWinnersInHash" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="fanduel" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="TournamentTest" />
-      <option name="METHOD_NAME" value="canSortParticipantsByScore" />
+      <option name="METHOD_NAME" value="canSetWinnersInHash" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -434,16 +435,16 @@
       <item index="0" class="java.lang.String" itemvalue="JUnit.All in fanduel" />
       <item index="1" class="java.lang.String" itemvalue="JUnit.TournamentTest.canSetWinnersInHash" />
       <item index="2" class="java.lang.String" itemvalue="JUnit.TournamentTest.canCheckIfPlayerIsInHash" />
-      <item index="3" class="java.lang.String" itemvalue="JUnit.TournamentTest.canSortParticipantsByScore" />
-      <item index="4" class="java.lang.String" itemvalue="JUnit.TournamentTest.canGenerateHashOfWinners" />
+      <item index="3" class="java.lang.String" itemvalue="JUnit.TournamentTest.canGenerateHashOfWinners" />
+      <item index="4" class="java.lang.String" itemvalue="JUnit.TournamentTest.canGetJackpot" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="JUnit.TournamentTest.canSetWinnersInHash" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.TournamentTest.canCheckIfPlayerIsInHash" />
-        <item index="2" class="java.lang.String" itemvalue="JUnit.TournamentTest.canGenerateHashOfWinners" />
-        <item index="3" class="java.lang.String" itemvalue="JUnit.TournamentTest.canSortParticipantsByScore" />
-        <item index="4" class="java.lang.String" itemvalue="JUnit.All in fanduel" />
+        <item index="0" class="java.lang.String" itemvalue="JUnit.TournamentTest.canGetJackpot" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.All in fanduel" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.TournamentTest.canSetWinnersInHash" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.TournamentTest.canCheckIfPlayerIsInHash" />
+        <item index="4" class="java.lang.String" itemvalue="JUnit.TournamentTest.canGenerateHashOfWinners" />
       </list>
     </recent_temporary>
   </component>
@@ -464,35 +465,35 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="TournamentTest_canCheckIfPlayerIsInHash - 2018.06.14 at 11h 08m 06s.xml">
-      <configuration name="TournamentTest.canCheckIfPlayerIsInHash" configurationId="JUnit" />
+    <history-entry file="TournamentTest_canGetJackpot - 2018.06.14 at 12h 50m 01s.xml">
+      <configuration name="TournamentTest.canGetJackpot" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TournamentTest_canGenerateHashOfWinners - 2018.06.14 at 09h 47m 51s.xml">
-      <configuration name="TournamentTest.canGenerateHashOfWinners" configurationId="JUnit" />
+    <history-entry file="TournamentTest_canGetJackpot - 2018.06.14 at 12h 50m 39s.xml">
+      <configuration name="TournamentTest.canGetJackpot" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TournamentTest_canGenerateHashOfWinners - 2018.06.14 at 11h 07m 03s.xml">
-      <configuration name="TournamentTest.canGenerateHashOfWinners" configurationId="JUnit" />
+    <history-entry file="TournamentTest_canGetJackpot - 2018.06.14 at 12h 53m 03s.xml">
+      <configuration name="TournamentTest.canGetJackpot" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TournamentTest_canSetWinnersInHash - 2018.06.14 at 09h 54m 16s.xml">
-      <configuration name="TournamentTest.canSetWinnersInHash" configurationId="JUnit" />
+    <history-entry file="TournamentTest_canGetJackpot - 2018.06.14 at 12h 53m 19s.xml">
+      <configuration name="TournamentTest.canGetJackpot" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TournamentTest_canSetWinnersInHash - 2018.06.14 at 09h 58m 32s.xml">
-      <configuration name="TournamentTest.canSetWinnersInHash" configurationId="JUnit" />
+    <history-entry file="TournamentTest_canGetJackpot - 2018.06.14 at 12h 55m 12s.xml">
+      <configuration name="TournamentTest.canGetJackpot" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TournamentTest_canSetWinnersInHash - 2018.06.14 at 09h 59m 11s.xml">
-      <configuration name="TournamentTest.canSetWinnersInHash" configurationId="JUnit" />
+    <history-entry file="TournamentTest_canGetJackpot - 2018.06.14 at 12h 55m 52s.xml">
+      <configuration name="TournamentTest.canGetJackpot" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TournamentTest_canSetWinnersInHash - 2018.06.14 at 11h 09m 52s.xml">
-      <configuration name="TournamentTest.canSetWinnersInHash" configurationId="JUnit" />
+    <history-entry file="TournamentTest_canGetJackpot - 2018.06.14 at 12h 57m 27s.xml">
+      <configuration name="TournamentTest.canGetJackpot" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TournamentTest_canSortParticipantsByScore - 2018.06.14 at 09h 43m 57s.xml">
-      <configuration name="TournamentTest.canSortParticipantsByScore" configurationId="JUnit" />
+    <history-entry file="TournamentTest_canGetJackpot - 2018.06.14 at 12h 58m 52s.xml">
+      <configuration name="TournamentTest.canGetJackpot" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TournamentTest_canSortParticipantsByScore - 2018.06.14 at 11h 04m 24s.xml">
-      <configuration name="TournamentTest.canSortParticipantsByScore" configurationId="JUnit" />
+    <history-entry file="TournamentTest_canGetJackpot - 2018.06.14 at 13h 01m 36s.xml">
+      <configuration name="TournamentTest.canGetJackpot" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TournamentTest_canSortParticipantsByScore - 2018.06.14 at 11h 05m 20s.xml">
-      <configuration name="TournamentTest.canSortParticipantsByScore" configurationId="JUnit" />
+    <history-entry file="TournamentTest_canGetJackpot - 2018.06.14 at 13h 02m 11s.xml">
+      <configuration name="TournamentTest.canGetJackpot" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="ToolWindowManager">
@@ -507,7 +508,7 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32713178" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32713178" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -755,6 +756,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/PrizeAllocator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="17" lean-forward="false" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/PlayerTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="192">
@@ -771,10 +782,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/PrizeAllocator.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/Tournament.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="17" lean-forward="false" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
+        <state relative-caret-position="344">
+          <caret line="62" column="83" lean-forward="false" selection-start-line="62" selection-start-column="83" selection-end-line="62" selection-end-column="83" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -783,18 +794,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/TournamentTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="237">
-          <caret line="86" column="29" lean-forward="false" selection-start-line="86" selection-start-column="29" selection-end-line="86" selection-end-column="29" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Tournament.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-222">
-          <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+        <state relative-caret-position="457">
+          <caret line="97" column="26" lean-forward="false" selection-start-line="97" selection-start-column="26" selection-end-line="97" selection-end-column="26" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

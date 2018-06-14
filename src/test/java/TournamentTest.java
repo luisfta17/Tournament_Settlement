@@ -89,4 +89,12 @@ public class TournamentTest {
         assertEquals("Daniel", hash2.get(3).get(0).getName());
     }
 
+    @Test
+    public void canGetJackpot(){
+        assertEquals("50.00", tournament1.getJackpot(prizes, 1, 1).toString());
+        assertEquals("35.00", tournament1.getJackpot(prizes, 1, 2).toString());
+        assertEquals("20.00", tournament1.getJackpot(prizes, 1, 4).toString());
+        assertEquals("16.00", tournament1.getJackpot(prizes, 1, 5).toString());
+        assertEquals("8.88", tournament1.getJackpot(prizes, 1, 9).toString());
+    }
 }
