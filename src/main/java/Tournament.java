@@ -12,7 +12,7 @@ public class Tournament implements PrizeAllocator{
         return participants;
     }
 
-    public HashMap<Integer, ArrayList<Participant>> populateHashWithArraysForPositions(Map<Integer, BigDecimal> prizes){
+    public HashMap<Integer, ArrayList<Participant>> createHashWithEmptyArraysForPositions(Map<Integer, BigDecimal> prizes){
         HashMap<Integer, ArrayList<Participant>> positions = new HashMap<>();
         for(int i = 1; i <= prizes.size() + 1; i++) {
             positions.put(i, new ArrayList<>());
@@ -20,9 +20,9 @@ public class Tournament implements PrizeAllocator{
         return  positions;
     }
 
-    public HashMap<Integer, ArrayList<Participant>> createHashMapOfPositions(List<Participant> participants, Map<Integer, BigDecimal> prizes){
+    public HashMap<Integer, ArrayList<Participant>> populateHashMapOfPositions(List<Participant> participants, Map<Integer, BigDecimal> prizes){
         List<Participant> list = sortParticipantsByScore(participants);
-        HashMap<Integer, ArrayList<Participant>> positions = populateHashWithArraysForPositions(prizes);
+        HashMap<Integer, ArrayList<Participant>> positions = createHashWithEmptyArraysForPositions(prizes);
         Integer position = 1;
         Integer lastScore = 0;
         Integer lastPosition = 0;
@@ -57,7 +57,7 @@ public class Tournament implements PrizeAllocator{
     }
 
     public void awardPrizes(List<Participant> participants, Map<Integer, BigDecimal> prizes) {
-        HashMap<Integer, ArrayList<Participant>> hashResults = this.createHashMapOfPositions(participants, prizes);
+        HashMap<Integer, ArrayList<Participant>> hashResults = this.populateHashMapOfPositions(participants, prizes);
         int prizeKey = 1;
         for(int i = 1; i <= hashResults.size(); i ++){
             if(hashResults.get(i).size() == 0) break;

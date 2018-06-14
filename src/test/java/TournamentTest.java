@@ -75,14 +75,14 @@ public class TournamentTest {
 
     @Test
     public void canGenerateHashOfArrays(){
-        assertEquals("{1=[], 2=[], 3=[], 4=[]}", tournament1.populateHashWithArraysForPositions(prizes).toString());
+        assertEquals("{1=[], 2=[], 3=[], 4=[]}", tournament1.createHashWithEmptyArraysForPositions(prizes).toString());
         prizes.put(4, fourthPrize);
-        assertEquals("{1=[], 2=[], 3=[], 4=[], 5=[]}", tournament1.populateHashWithArraysForPositions(prizes).toString());
+        assertEquals("{1=[], 2=[], 3=[], 4=[], 5=[]}", tournament1.createHashWithEmptyArraysForPositions(prizes).toString());
     }
 
     @Test
     public void canSetWinnersInHash() {
-        HashMap<Integer, ArrayList<Participant>> hash = tournament1.createHashMapOfPositions(participantsList1, prizes);
+        HashMap<Integer, ArrayList<Participant>> hash = tournament1.populateHashMapOfPositions(participantsList1, prizes);
         assertEquals("Jessica", hash.get(1).get(1).getName());
         assertEquals("Ana", hash.get(1).get(0).getName());
         assertEquals(2, hash.get(1).size());
@@ -92,7 +92,7 @@ public class TournamentTest {
         assertEquals(0, hash.get(3).size());
         assertEquals(0, hash.get(4).size());
         participantsList1.add(player5);
-        HashMap<Integer, ArrayList<Participant>> hash2 = tournament1.createHashMapOfPositions(participantsList1, prizes);
+        HashMap<Integer, ArrayList<Participant>> hash2 = tournament1.populateHashMapOfPositions(participantsList1, prizes);
         assertEquals("Daniel", hash2.get(3).get(0).getName());
     }
 
