@@ -12,15 +12,15 @@ public class Player implements Participant {
     }
 
     public String getName() {
-        return name;
+        return this.name;
     }
 
     public int getScore() {
-        return score;
+        return this.score;
     }
 
     public BigDecimal getPrize() {
-        return prize;
+        return this.prize;
     }
 
     public void setPrize(BigDecimal prize) {

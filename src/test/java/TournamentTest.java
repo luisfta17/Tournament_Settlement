@@ -109,7 +109,7 @@ public class TournamentTest {
     }
 
     @Test
-    public void canGenerateHashOfWinners(){
+    public void canGenerateHashOfArrays(){
         assertEquals("{1=[], 2=[], 3=[], 4=[]}", tournament1.populateHashWithArraysForPositions(prizes).toString());
         prizes.put(4, fourthPrize);
         assertEquals("{1=[], 2=[], 3=[], 4=[], 5=[]}", tournament1.populateHashWithArraysForPositions(prizes).toString());

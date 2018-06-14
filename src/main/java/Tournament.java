@@ -8,14 +8,15 @@ public class Tournament implements PrizeAllocator{
 
 
     public List<Participant> sortParticipantsByScore(List<Participant> participants){
-        Collections.sort(participants, (playerA, playerB) -> playerA.getScore() < playerB.getScore() ? 1 : playerA.getScore() == playerB.getScore() ? 0 : -1);
+        Collections.sort(participants, (playerA, playerB) -> playerA.getScore() < playerB.getScore() ? 1 :
+                playerA.getScore() == playerB.getScore() ? 0 : -1);
         return participants;
     }
 
     public HashMap<Integer, ArrayList<Participant>> populateHashWithArraysForPositions(Map<Integer, BigDecimal> prizes){
         HashMap<Integer, ArrayList<Participant>> positions = new HashMap<>();
-        for(int i = 1; i < prizes.size() + 2; i++) {
-            positions.put(i, new ArrayList<Participant>());
+        for(int i = 1; i <= prizes.size() + 1; i++) {
+            positions.put(i, new ArrayList<>());
         }
         return  positions;
     }
@@ -37,7 +38,6 @@ public class Tournament implements PrizeAllocator{
                 position++;
             }
             else if (p.getScore() == lastScore){
-                lastScore = p.getScore();
                 positions.get(lastPosition).add(p);
             }
         }
@@ -57,9 +57,12 @@ public class Tournament implements PrizeAllocator{
               int numWinners = hashResults.get(i).size();
               // Initialise prize pool
               BigDecimal prizeValue = new BigDecimal("0.00").setScale(2, BigDecimal.ROUND_FLOOR);
+
+
+
               // start j at next prize
               int j = prizeKey;
-              //get limit for j in the loop
+              //get limit for j in the loop the one is to get to the last one
               int limit = Math.min(prizeKey + numWinners, prizes.size() + 1);
               do{
                   // if we exceed bounds break
@@ -68,6 +71,8 @@ public class Tournament implements PrizeAllocator{
                   prizeValue = prizeValue.add(prizes.get(j));
                   j++;
               } while(j < limit);
+
+
               BigDecimal individualPrize = prizeValue.divide(new BigDecimal(numWinners), BigDecimal.ROUND_FLOOR);
               //assign individual prizes
               for(Participant participant : hashResults.get(i) ){
