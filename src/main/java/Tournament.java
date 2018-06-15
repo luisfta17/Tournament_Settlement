@@ -3,9 +3,6 @@ import java.util.*;
 
 
 public class Tournament implements PrizeAllocator{
-    public Tournament(){
-    }
-
 
     public List<Participant> sortParticipantsByScore(List<Participant> participants){
         Collections.sort(participants, (playerA, playerB) -> playerA.getScore() < playerB.getScore() ? 1 : playerA.getScore() == playerB.getScore() ? 0 : -1);
